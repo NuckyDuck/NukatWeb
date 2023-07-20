@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "username": "NuckyDuck",
+      "password": "Camisa921!"
+    },
+    {
+      "username": "usuario2",
+      "password": "contraseña2"
+    },
+    {
+      "username": "asd",
+      "password": "a"
+    },
+    {
+      "username": "asda",
+      "password": "asd"
+    },
+    {
+      "username": "asd1",
+      "password": "asd"
+    }
+  ]
+}

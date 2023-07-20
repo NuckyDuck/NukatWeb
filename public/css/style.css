@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&amp;display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+}
+
+body {
+    margin: 0;
+}
+
+body, html{
+    background-color: #282a36
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+}
+
+body {
+    margin: 0;
+}
+
+body, html{
+    background-color: #282a36
+}
+
+.container__menu {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alineamos verticalmente el contenido */
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 36px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #C4CFDE;
+}
+
+#selected {
+    background: #fbd600;
+    color: #fff;
+    padding: 10px 40px;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+/* Icono del menú */
+nav .icon-burger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Tu CSS actual aquí */
+
+/* Icono del menú */
+.menu .icon-burger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fbd600;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+/* Media Query para dispositivos con un ancho máximo de 768px (pantallas móviles) */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none; /* Ocultamos la lista de enlaces en dispositivos móviles */
+        margin-top: 5px; /* Agregamos una separación vertical de 5px entre el botón y la lista */
+        position: fixed;
+        top: 0px;
+        left: 0;
+        right: 0;
+        background-color: #17181f;
+        padding: 10px;
+        z-index: 0;
+    }
+
+    .menu .icon-burger {
+        display: block; /* Mostramos el botón de menú en dispositivos móviles */
+    }
+
+    /* Agregamos la separación vertical entre cada enlace del menú desplegable */
+    .menu ul li {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* Resto del CSS que ya tienes para el menú en dispositivos móviles */
+
+    /* Estilos adicionales para ocultar o mostrar el menú desplegable al hacer clic en el botón */
+    /* Resto del CSS que ya tienes para el menú en dispositivos móviles */
+
+    /* Estilos adicionales para ocultar o mostrar el menú desplegable al hacer clic en el botón */
+    #nav-toggle:checked + .menu ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px; /* Agregamos un margen superior de 20px cuando el menú está abierto */
+        background-color: #17181f; /* Color de fondo del menú desplegable */
+        position: fixed; /* Posicionamos el menú fijo cuando está abierto */
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    /* ... (otros estilos) ... */
+
+    #nav-toggle:not(:checked) + .menu ul {
+        display: none; /* Ocultamos el menú cuando está cerrado */
+        margin-top: 0; /* Reseteamos el margen superior a 0 cuando está cerrado */
+    }
+
+    .menu ul.menu-open {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+}
+}
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+
+
+
+
+/* Cover para PC */
+.cover {
+    width: 100%;
+    padding-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+}
+
+.container__cover {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cover .container__info {
+    max-width: 400px;
+    margin-top: 40px;
+    z-index: 2;
+}
+
+.cover h1 {
+    max-width: 400px;
+    font-size: 60px;
+    font-weight: 900;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.cover h1 span {
+    color: #fbd600;
+}
+
+.cover h2 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 900;
+    margin-top: -10px;
+}
+
+.cover #subtitul0 {
+    color: #C4CFDE;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -110px;
+}
+
+.cover p {
+    margin-top: 10px;
+    color: #C4CFDE;
+}
+
+.startnow {
+    padding: 10px 40px;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    color: #17181f;
+    background-color: #fbd600;
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px -5px #20202049;
+    cursor: pointer;
+    transition: box-shadow 500ms;
+}
+
+.cover input[type="button"]:hover {
+    box-shadow: 1px 1px 30px -5px #20202085;
+}
+
+.container__image {
+    position: relative;
+}
+
+.container__image img {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 500px;
+}
+
+@media (max-width: 768px) {
+    .cover {
+        margin-top: 0px /* Ajustamos el margen superior para centrar mejor en dispositivos móviles */
+    }
+
+    .container__cover {
+        flex-direction: column; /* Cambiamos dirección a columna en dispositivos móviles */
+        align-items: center; /* Centramos los elementos en dispositivos móviles */
+    }
+
+    .cover h1 {
+        font-size: 50px;
+    }
+
+    .cover h2 {
+        font-size: 35px;
+    }
+
+    .cover #subtitul0 {
+        margin-top: 10px; /* Ajustamos el margen superior para centrar mejor en dispositivos móviles */
+    }
+
+    .container__info {
+        text-align: center;
+    }
+
+    .cover p {
+        text-align: center; /* Centramos el texto en dispositivos móviles */
+    }
+
+    .startnow  {
+        display: block;
+        margin: 20px auto;
+    }
+
+    .container__image img {
+        display: none;
+    }
+}
+
+.container__pricing {
+    max-width: 1200px;
+    height: 150%;
+    margin: auto;
+    padding: 0px 30px;
+    margin-top: 90px;
+}
+
+
+
+.container__title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #fbd600;
+    position: relative;
+    left: 30px;
+    margin-top: -100px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.featured_plans {
+    width: 100%;
+    padding: 0px 20px; /* Updated padding for responsiveness */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cards {
+    display: inline-flex;
+}
+
+.card {
+    padding: 30px;
+    margin: 10px;
+    background-color: #17181f;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.5s ease;
+    flex: 0 0 30%;
+    max-width: 350px;
+    margin-top: 30px;
+    height: 150%;
+}
+
+.card .title i {
+    color: #fff;
+    font-size: 38px;
+}
+
+.card .title p {
+    font-family: 'Poppins', sans-serif;
+    color: #dedcdc;
+    font-size: 13px;
+}
+
+.card h1 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card h2 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #fbd600;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #17181f;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+#price{
+    color: #fbd600;
+    font-weight: 900;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container__title h1 {
+        font-size: 40px;
+        left: 0;
+        margin-top: -150px;
+    }
+
+    .featured_plans {
+        padding: 0px 10px;
+    }
+
+    .card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+  }
+
+  .section-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+    margin-top: 30px;
+    
+  }
+
+  .text {
+    width: 50%;
+    font-size: 18px;
+    color: #233142;
+    padding: 0 20px;
+  }
+
+  .text h2{
+    color: #fbd600;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+
+  .text p{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+  }
+
+  .image {
+    width: 500px;
+  }
+
+  #image3{
+    width: 500px;
+  }
+
+.section-container .title h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #fbd600;
+}
+
+@media (max-width: 768px) {
+  .section-item {
+    flex-direction: column; /* Cambiar dirección a columna en dispositivos móviles */
+  }
+
+  .section-item .image,
+  .section-item .text {
+    width: 100%; /* Hacer que las imágenes y textos ocupen el ancho completo */
+  }
+
+  .title h1{
+    font-size: 40px;
+  }
+
+  .image {
+    order: -1; /* Cambiar el orden de la imagen para que esté arriba en dispositivos móviles */
+  }
+
+  .text {
+    margin-top: 20px; /* Añadir un espacio entre la imagen y el texto */
+  }
+
+  .text h2{
+    text-align: center;
+  }
+
+  #image3{
+    width: 400px;
+  }
+  
+}
+
+.FAQ{
+    width: 150%;
+    padding: 0px 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -80px;
+}
+
+.FAQ_TITLE h1{
+    text-align: center;
+    color: #fbd600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    
+}
+
+.FAQ_QUESTION {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin-right: 80px;
+  }
+
+  .FAQ_ANSWER {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+  }
+/* Media Query para dispositivos con un ancho máximo de 768px (pantallas móviles) */
+@media (max-width: 768px) {
+    .FAQ {
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    .FAQ_TITLE h1{
+        font-size: 40px;
+    }
+    .FAQ_QUESTION,
+    .FAQ_ANSWER {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .FAQ_QUESTION{
+        text-align: center;
+    }
+
+    .FAQ_ANSWER{
+        text-align: center;
+    }
+}
+
+
+footer{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #282a36;
+    background-size: cover;
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.box__footer .logo img{
+    width: 280px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #fff ;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.box__footer a{
+    margin-top: 0px;
+    color: #7a7a7a;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .box__footer {
+        width: 100%; /* Ajustamos el ancho para que ocupe toda la pantalla en dispositivos móviles */
+        text-align: center; /* Centramos el contenido del footer */
+    }
+    .box__footer .logo img {
+        margin: 0 auto; /* Centramos la imagen horizontalmente */
+    }
+}
